@@ -1,0 +1,100 @@
+
+/* CONTENEDOR PRINCIPAL */
+.item__menu{
+    border-radius: 10px;
+    /* width: 120px; */
+    width: 35%;
+    max-height: 200px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) 2fr;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+    background-color: var(--color-secundario);
+    border: solid 1px #fff;
+    transition: border .3s, box-shadow .3s, transform .4s ease-in-out;
+    &:hover{
+        border: solid 1px var(--color-primary);
+        box-shadow: 0 0 10px var(--color-primary);
+        transform: scale(1.05);
+    }
+    margin-top: 15px;
+}
+@media (min-width: 768px) {
+    .item__menu{
+
+        width: 140px;
+    }
+}
+
+
+/* CONTENEDOR -- IMAGEN DE PRODUCTO */
+
+.div__menu__img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* IMAGEN DEL PRODUCTO */
+.menu__img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+/*  H4 PARA PRECIO DEL PRODUCTO */
+.h4__menu{
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+
+/* ELEMENTO P PARA EL NOMBRE DEL PRODUCTO Y NÚMERO DE CONTADOR*/
+.menu__item__p{
+    color: white;
+    font-size: clamp(.5rem, 5vw, 1rem);
+    margin: 0;
+    text-align: center;
+}
+
+.menu__nombre__producto{
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.538) var(--color-secundario);
+}
+
+
+/* CONTENEDOR PARA EL CONTADOR */
+.div__item__contador{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+/* BOTONES DE CONTADOR */
+.boton__contador__menu{
+    width: 25px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: var(--color-secundario);
+    border: solid 1px var(--color-primary);
+    color: white;
+    /* font-size: clamp(.5rem, 5vw, .9rem); */
+    transition: background-color .3s, color .3s;
+    &:hover{
+        background-color: var(--color-primary);
+        color: var(--color-secundario);
+    }
+}

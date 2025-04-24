@@ -1,0 +1,13 @@
+h1{
+    color: var(--color-primary);
+}
+.contenedor_home{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

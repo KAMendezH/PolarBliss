@@ -1,0 +1,71 @@
+/* **************  VARIABLES/ RESET  ****************/
+:root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+  /* VARIABLES */
+
+  /* Colores */
+  --color-primary: #40e0d0;
+  --amarillo-hover: #00ffe5;
+  --color-secundario: #0d0d0d;
+
+  /* Tipografias */
+  --font-family-texto: "roboto", sans-serif;
+  --font-family-titulo: "montserrat", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* **************  CONTENEDOR PRINCIPAL  ****************/
+html{
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  background-color: var(--color-secundario);
+  /* overflow-x: hidden; */
+}
+/* DIV PRINCIPAL ID ROOT */
+ #root {
+  font-family: var(--font-family-texto);
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 90%;
+  max-width: 100%;
+  background-color: var(--color-secundario);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* CONTENEDOR PRINCIPAL */
+.contenedor_principal {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Esto ayuda a ocupar toda la pantalla como mínimo */
+  padding: 5px;
+}
+
+
+

@@ -1,0 +1,171 @@
+/* **************  HERO  ****************/
+.contenedor_hero{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Diseño responsivo a pantalla de 700px */
+@media (max-width: 700px) {
+    /* ALINEACIÓN EN COLUMNAS */
+    .contenedor_hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+    }
+    /* ELEMENTOS APILADOS PARA USAR EL MISMO ESPACIO DE POSICIONAMIENTO */
+    .div__hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+    /* IMAGEN LOGO */
+    .logo__hero {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        object-fit: contain; /* Hace que la imagen cubra el fondo */
+        opacity: 0.4; /* Reduce la opacidad para que el texto sea visible */
+        z-index: 0;
+        aspect-ratio: 1/1;
+    }
+    /* CONTENEDOR DE TEXTO */
+    .main__hero {
+        position: relative;
+        z-index: 10; /* Asegura que el texto esté por encima */
+        text-align: center;
+        padding-left: 10px;
+    }
+    /* TITULO */
+    h1, .h1__hero {
+        font-size: 2rem;
+        position: relative;
+        z-index: 10;
+        text-shadow: 0 0 10px var(--color-secundario), 0 0 15px var(--color-secundario);
+    }
+    /* ANIMACIÓN DE ENTRADA CON OPACIDAD MODIFICADA PARA NO SOBREESCRIBIR LA ORIGINAL */
+    @keyframes animated-img{
+        from{
+            transform: translateX(100%);
+            opacity: 0;
+            
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 0.4;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ************ CONTENIDO DE HERO ************** */
+/* TEXTO */
+h1, .h1__hero{
+    font-family: var(--font-family-titulo);
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: white;
+}
+.h1__hero{
+     color: var(--color-primary); /* COLOR PRIMARIO EN LETRAS DEL TITULO */
+}
+
+
+/* CONTENEDORES DEL HERO */
+.main__hero, .div__hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+/* LOGOTIPO */
+.logo__hero{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    aspect-ratio: 1/1; /* SIEMPRE MANTIENE FORMATO 1:1 */
+
+    transform: translateX(100%); /* ANIMACIÓN DE ENTRADA */
+}
+
+
+
+
+
+
+
+
+
+
+/********************** ANIMACIONES *********************/
+/* CONFIGURACIÓN ANTES DE LA ANIMACIÓN */
+.div__animate{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+/* ANIMACIÓN DE ENTRADA EN CONTEDOR DE TITULO*/
+.animated-content{
+    --direccion-animacion: normal;
+    animation: animated-content 1.3s ease-in-out  1 normal forwards;
+
+}
+
+/* ANIMACIÓN DE ENTRADA EN IMAGEN */
+.animated-img{
+     animation: animated-img 1.3s ease-in-out 1 forwards, bounce 0.6s ease-in-out 1 1.3s ;
+}
+
+@keyframes animated-content{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+}
+
+/* ANIMACIONES DE LOGO*/
+/* DENTRO DE MEDIA PARA NO SOBREESCRIBIR LA OPACIDAD PARA DISPOSITIVOS MOVILES  */
+@media (min-width: 701px) {
+    @keyframes animated-img{
+        from{
+            transform: translateX(100%);
+            opacity: 0;
+            
+        }
+        to{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+        
+    }
+}
+
+/* SALTO DE IMAGEN DESPUES DE LA ANIMACIÓN */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+

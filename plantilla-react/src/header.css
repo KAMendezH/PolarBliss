@@ -1,0 +1,107 @@
+/* **************  HEADER  ****************/
+.header{
+    display: flex;
+    height: 150px;
+    max-height: 200px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-secundario);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.775), 10px 10px 30px  rgba(0, 0, 0, 0.578);
+
+    z-index: 20;
+    transition: transform 0.3s ease-in-out ;    
+}
+/* @MEDIA DE RESPONSIVIDAD  RES 700PX*/
+@media (max-width: 700px){ /*ADAPTACIÓN DE FILAS PARA RESOLUCION DE PANTALLA*/	
+    .header{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+/* ANIMACIÓN DE HEADER */
+.header__visible{
+    transform: translateY(0);
+}
+
+.header__invisible{
+    transform: translateY(-100%);
+}
+
+
+
+
+
+
+
+
+
+
+/* ******************** CONTENEDOR DE NAVEGACIÓN ******************/
+.navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* ************ CONTENIDO DE HEADER ************** */
+
+/* LOGO HEADER */
+.logo{
+    width: 150px;
+    height: 150px;
+}
+/* TITULO HEADER */
+.h1__marca{
+    font-size: 2rem;
+    color: white;
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+/* COLOR PRIMARIO  EN EL TITULO */
+.h1__marca__inicial{
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+/* LINKS DE NAVEGACIÓN */
+a{
+
+    text-decoration: none;
+    color: white;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    transition: color 0.3s text-shadow 0.5s;
+    &:hover{
+        color: var(--amarillo-hover);        text-shadow: 0 0 10px var(--amarillo-hover);;
+    }
+    &.link__activo{
+        color: var(--color-primary);
+        text-shadow: 0 0 10px var(--amarillo-hover);;
+    }
+}
+
+.link__activo{
+    color: var(--color-primary);
+    text-shadow: 0 0 10px var(--amarillo-hover);
+}
+

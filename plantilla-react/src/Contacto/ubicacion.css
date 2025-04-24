@@ -1,0 +1,21 @@
+    .h1__ubicacion{
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        color: white;
+        font-family: var(--font-family-titulo);
+        text-align: center;
+        background-color: var(--color-primary);
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-shadow: 0 0 10px var(--color-secundario), 0 0 15px var(--color-secundario);
+    }
+
+    .h2__ubicacion{
+        font-size: clamp(1rem, 4vw, 1.8rem);
+        color: white;
+        font-family: var(--font-family-texto);
+        text-align: center;
+    }
+
+    .ubicacion{
+        width: 100%;
+    }
