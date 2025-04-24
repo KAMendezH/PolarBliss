@@ -1,4 +1,4 @@
-import "./botonwhatsapp.css";
+import "./botonWhatsapp.css";
 import { FaWhatsapp } from "react-icons/fa6";
 
 function BotonWhatsApp( { tel, mensaje } ) {

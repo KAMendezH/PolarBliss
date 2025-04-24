@@ -90,7 +90,7 @@ p{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.775), 0 0 30px  rgba(255, 255, 255, 0.578);   
     text-align: center;
     border-radius: 10px;
-    margin:0 auto; */
+    margin:0 auto; 
     &:hover{
         cursor: pointer;
     }
